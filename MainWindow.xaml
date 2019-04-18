@@ -1,0 +1,14 @@
+﻿<Window x:Class="Tetris.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="638" Width="673.283" Loaded="Window_Loaded_1" ResizeMode="NoResize" Background="Gainsboro">
+    
+    <Canvas Name="myCanvas" HorizontalAlignment="Left" VerticalAlignment="Top" Height="37" Width="33">
+         <Canvas x:Name="myCanvas1" HorizontalAlignment="Left" VerticalAlignment="Top" Height="37" Width="33"/>
+        <TextBlock Canvas.Left="368" TextWrapping="Wrap" Canvas.Top="22" FontSize="18" FontWeight="Bold" Foreground="SaddleBrown" FontFamily="Segoe Script"><Run Language="lt-lt" Text="SEKANTI FIGŪRA:"/></TextBlock>
+        <TextBlock Canvas.Left="368" TextWrapping="Wrap" Canvas.Top="230" Foreground="#FFEE2020" FontWeight="Bold" FontSize="36" FontFamily="Segoe Script"><Run Foreground="#FF5DEA1C" Text="T"/><Run Foreground="#FFFFF300" Text="aš"/><Run Foreground="#FF0E45FF" Text="ka"/><Run Text="i:"/></TextBlock>
+        <TextBlock x:Name="blockTaskai" Canvas.Left="519" TextWrapping="Wrap" Canvas.Top="230" Foreground="#FFEE2020" FontWeight="Bold" FontSize="36" FontFamily="Segoe Script" Text="0"/>
+
+    </Canvas>   
+</Window>
+    

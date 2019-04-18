@@ -1,0 +1,9 @@
+﻿<Window x:Class="Tetris.Leaderboard"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Leaderboard" Height="356.107" Width="300" Loaded="Window_Loaded_1" ResizeMode="NoResize">
+    <DockPanel LastChildFill="True">
+        <DataGrid x:Name="gridBoard" ItemsSource="{Binding}" IsReadOnly="True" IsHitTestVisible="False" ColumnWidth="91"/>
+    </DockPanel>
+
+</Window>
