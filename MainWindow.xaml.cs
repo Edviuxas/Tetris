@@ -28,6 +28,85 @@ namespace Tetris
         DispatcherTimer t;
         Menu Menu;
         int Taskai = 0;
+        bool arGameOver = false;
+        public List<Detale> VisosDetales = new List<Detale>();
+
+        public void GeneruotiDetales()
+        {
+            VisosDetales.Clear();
+            Detale d1 = new Detale();
+            d1.LangeliuKoord.Add(new Point(1, 4));
+            d1.LangeliuKoord.Add(new Point(1, 5));
+            d1.LangeliuKoord.Add(new Point(1, 6));
+            d1.LangeliuKoord.Add(new Point(1, 7));
+            d1.DetalesNr = 1;
+            d1.PasukimoKampas = 0;
+            d1.Spalva = Colors.Cyan;
+            Detale d2 = new Detale();
+            d2.LangeliuKoord.Add(new Point(2, 6));
+            d2.LangeliuKoord.Add(new Point(1, 6));
+            d2.LangeliuKoord.Add(new Point(1, 5));
+            d2.LangeliuKoord.Add(new Point(1, 4));
+            d2.DetalesNr = 2;
+            d2.PasukimoKampas = 0;
+            d2.Spalva = Colors.Blue;
+            Detale d3 = new Detale();
+            d3.LangeliuKoord.Add(new Point(2, 4));
+            d3.LangeliuKoord.Add(new Point(1, 4));
+            d3.LangeliuKoord.Add(new Point(1, 5));
+            d3.LangeliuKoord.Add(new Point(1, 6));
+            d3.DetalesNr = 3;
+            d3.PasukimoKampas = 0;
+            d3.Spalva = Colors.Orange;
+            Detale d4 = new Detale();
+            d4.LangeliuKoord.Add(new Point(2, 6));
+            d4.LangeliuKoord.Add(new Point(2, 5));
+            d4.LangeliuKoord.Add(new Point(1, 5));
+            d4.LangeliuKoord.Add(new Point(1, 6));
+            d4.DetalesNr = 4;
+            d4.PasukimoKampas = 0;
+            d4.Spalva = Colors.Yellow;
+            Detale d5 = new Detale();
+            d5.LangeliuKoord.Add(new Point(2, 6));
+            d5.LangeliuKoord.Add(new Point(2, 5));
+            d5.LangeliuKoord.Add(new Point(1, 5));
+            d5.LangeliuKoord.Add(new Point(1, 4));
+            d5.DetalesNr = 5;
+            d5.PasukimoKampas = 0;
+            d5.Spalva = Colors.Red;
+            Detale d6 = new Detale();
+            d6.LangeliuKoord.Add(new Point(2, 5));
+            d6.LangeliuKoord.Add(new Point(1, 5));
+            d6.LangeliuKoord.Add(new Point(1, 4));
+            d6.LangeliuKoord.Add(new Point(1, 6));
+            d6.DetalesNr = 6;
+            d6.PasukimoKampas = 0;
+            d6.Spalva = Colors.Purple;
+            Detale d7 = new Detale();
+            d7.LangeliuKoord.Add(new Point(2, 4));
+            d7.LangeliuKoord.Add(new Point(2, 5));
+            d7.LangeliuKoord.Add(new Point(1, 5));
+            d7.LangeliuKoord.Add(new Point(1, 6));
+            d7.DetalesNr = 7;
+            d7.PasukimoKampas = 0;
+            d7.Spalva = Colors.LimeGreen;
+            VisosDetales.Add(d1);
+            VisosDetales.Add(d2);
+            VisosDetales.Add(d3);
+            VisosDetales.Add(d4);
+            VisosDetales.Add(d5);
+            VisosDetales.Add(d6);
+            VisosDetales.Add(d7);
+        }
+
+        public Detale RandomDetale()
+        {
+            Random rnd = new Random();
+            Detale d = new Detale();
+            int indeksas = rnd.Next(VisosDetales.Count);
+            d = VisosDetales[indeksas];
+            return d;
+        }
 
         public MainWindow(Menu menu)
         {
@@ -37,67 +116,13 @@ namespace Tetris
 
         private void Window_Loaded_1(object sender, RoutedEventArgs e)
         {
-            int Eile = 1;
-            int Stulpelis = 1;
             KeyDown += MainWindow_KeyDown;
-            int x = 0;
-            int y = 0;
             myBoard.myCnv = myCanvas;
             smallBoard.myCnv = myCanvas1;
-            for (int i = 0; i < 200; i++) // nubraizom pagrindinius langelius REIKTU PERKELTI I BOARD KLASE?
-            {
-                Board.Langelis lang = new Board.Langelis();
-                lang.myRect = new Rectangle();
-                lang.myRect.Stroke = new SolidColorBrush(Colors.SaddleBrown);
-                lang.myRect.StrokeThickness = 1;
-                lang.myRect.Width = 30;
-                lang.myRect.Height = 30;
-                lang.myRect.Fill = new SolidColorBrush(Colors.Black);
-                Canvas.SetLeft(lang.myRect, x);
-                Canvas.SetTop(lang.myRect, y);
-                myBoard.myCnv.Children.Add(lang.myRect);
-                lang.Koord = new Point(Eile, Stulpelis);
-                myBoard.VisiLangeliai.Add(lang);
-                x += 30;
-                Stulpelis += 1;
-                if (x == 300)
-                {
-                    Eile += 1;
-                    Stulpelis = 1;
-                    y += 30;
-                    x = 0;
-                }
-            }
-            x = 360;
-            y = 30;
-            Eile = 1;
-            Stulpelis = 1;
-            for (int i = 0; i < 15; i++) // nubraizom salutinius langelius
-            {
-                Board.Langelis lang = new Board.Langelis();
-                lang.myRect = new Rectangle();
-                lang.myRect.Stroke = new SolidColorBrush(Colors.SaddleBrown);
-                lang.myRect.StrokeThickness = 1;
-                lang.myRect.Width = 30;
-                lang.myRect.Height = 30;
-                lang.myRect.Fill = new SolidColorBrush(Colors.Gainsboro);
-                Canvas.SetLeft(lang.myRect, x);
-                Canvas.SetTop(lang.myRect, y);
-                smallBoard.myCnv.Children.Add(lang.myRect);
-                lang.Koord = new Point(Eile, Stulpelis);
-                smallBoard.VisiLangeliai.Add(lang);
-                x += 30;
-                Stulpelis += 1;
-                if (x == 510)
-                {
-                    Eile += 1;
-                    Stulpelis = 1;
-                    y += 30;
-                    x = 360;
-                }
-            }
-            myBoard.GeneruotiDetales();
-            BusimaDetale = myBoard.RandomDetale();
+            myBoard.PiestiPagrindineLenta();
+            smallBoard.PiestiSalutineLenta();
+            GeneruotiDetales();
+            BusimaDetale = RandomDetale();
             StartAnimation();
         }
 
@@ -124,7 +149,7 @@ namespace Tetris
                         }
                         break;
                     case Key.Left:
-                        if (!myBoard.ArLieciaKaireSiena(d) && !myBoard.ArLieciaDetalesKaire(d))
+                        if (!d.ArLieciaKaireSiena(myBoard.UzimtiLangeliai) && !d.ArLieciaDetalesKaire(myBoard.UzimtiLangeliai))
                         {
                             for (int i = 0; i < d.LangeliuKoord.Count; i++)
                             {
@@ -140,7 +165,7 @@ namespace Tetris
                                 d.LangeliuKoord[i] = koord;
                             }
                         }
-                        if (myBoard.ArLieciaDetalesApacia(d))
+                        if (d.ArLieciaDetalesApacia(myBoard.UzimtiLangeliai))
                         {
                             t.IsEnabled = false;
                             for (int i = 0; i < d.LangeliuKoord.Count; i++)
@@ -161,7 +186,7 @@ namespace Tetris
                         }
                         break;
                     case Key.Right:
-                        if (!myBoard.ArLieciaDesineSiena(d) && !myBoard.ArLieciaDetalesDesine(d))
+                        if (!d.ArLieciaDesineSiena(myBoard.UzimtiLangeliai) && !d.ArLieciaDetalesDesine(myBoard.UzimtiLangeliai))
                         {
                             for (int i = 0; i < d.LangeliuKoord.Count; i++)
                             {
@@ -177,7 +202,7 @@ namespace Tetris
                                 d.LangeliuKoord[i] = koord;
                             }
                         }
-                        if (myBoard.ArLieciaDetalesApacia(d))
+                        if (d.ArLieciaDetalesApacia(myBoard.UzimtiLangeliai))
                         {
                             t.IsEnabled = false;
                             for (int i = 0; i < d.LangeliuKoord.Count; i++)
@@ -195,7 +220,7 @@ namespace Tetris
                             Point Koord = d.LangeliuKoord[i];
                             myBoard.NuspalvintLangeli(Convert.ToInt32(Koord.X), Convert.ToInt32(Koord.Y), Colors.Black);
                         }
-                        while (!myBoard.ArLieciaApatineSiena(d) && !myBoard.ArLieciaDetalesApacia(d))
+                        while (!d.ArLieciaApatineSiena(myBoard.UzimtiLangeliai) && !d.ArLieciaDetalesApacia(myBoard.UzimtiLangeliai))
                         {
                             for (int i = 0; i < d.LangeliuKoord.Count; i++)
                             {
@@ -237,9 +262,9 @@ namespace Tetris
         private void StartAnimation()
         {
             smallBoard.Isvalymas();
-            myBoard.GeneruotiDetales();
+            GeneruotiDetales();
             d = BusimaDetale;
-            BusimaDetale = myBoard.RandomDetale();
+            BusimaDetale = RandomDetale();
             foreach (var koord in d.LangeliuKoord)
             {
                 myBoard.NuspalvintLangeli(Convert.ToInt32(koord.X), Convert.ToInt32(koord.Y), d.Spalva);
@@ -248,7 +273,7 @@ namespace Tetris
             {
                 smallBoard.NuspalvintLangeliSmall(Convert.ToInt32(koord.X), Convert.ToInt32(koord.Y), BusimaDetale.Spalva);
             }
-            if (!myBoard.ArLieciaDetalesApacia(d)) // tikrinam, ar tik atsiradus detalei ji nera ant kitos detales
+            if (!d.ArLieciaDetalesApacia(myBoard.UzimtiLangeliai)) // tikrinam, ar tik atsiradus detalei ji nera ant kitos detales
             {
                 t = new DispatcherTimer();
                 t.Tick += t_Tick;
@@ -258,6 +283,7 @@ namespace Tetris
             else
             {
                 t.Stop();
+                arGameOver = true;
                 GameOver GameOver = new GameOver(Menu, Taskai, this);
                 GameOver.Show();
                 //MessageBox.Show("Game over!");
@@ -266,7 +292,7 @@ namespace Tetris
 
         void t_Tick(object sender, EventArgs e)
         {
-            if (myBoard.ArLieciaDetalesApacia(d) || myBoard.ArLieciaApatineSiena(d))
+            if (d.ArLieciaDetalesApacia(myBoard.UzimtiLangeliai) || d.ArLieciaApatineSiena(myBoard.UzimtiLangeliai))
             {
                 t.IsEnabled = false;
                 for (int i = 0; i < d.LangeliuKoord.Count; i++)
@@ -292,6 +318,12 @@ namespace Tetris
                     myBoard.NuspalvintLangeli(Convert.ToInt32(tmp.X), Convert.ToInt32(tmp.Y), d.Spalva);
                 }
             }
+        }
+
+        private void Window_Closing_1(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            if (!arGameOver)
+                Application.Current.Shutdown();
         }
     }
 }

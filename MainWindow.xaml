@@ -1,7 +1,7 @@
 ﻿<Window x:Class="Tetris.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="MainWindow" Height="638" Width="673.283" Loaded="Window_Loaded_1" ResizeMode="NoResize" Background="Gainsboro">
+        Title="MainWindow" Height="638" Width="673.283" Loaded="Window_Loaded_1" ResizeMode="NoResize" Background="Gainsboro" Closing="Window_Closing_1">
     
     <Canvas Name="myCanvas" HorizontalAlignment="Left" VerticalAlignment="Top" Height="37" Width="33">
          <Canvas x:Name="myCanvas1" HorizontalAlignment="Left" VerticalAlignment="Top" Height="37" Width="33"/>

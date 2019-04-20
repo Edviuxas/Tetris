@@ -8,7 +8,7 @@ using System.Windows.Media;
 
 namespace Tetris
 {
-    class Detale
+    public class Detale
     {
         public Detale()
         {
@@ -515,7 +515,7 @@ namespace Tetris
                 default:
                     break;
             }
-            if (myBoard.ArLieciaApatineSiena(this) || myBoard.ArLieciaDetalesApacia(this) || ArIssikisaTaskai()) // Kaip šitą būtų galima padaryt protingiau?
+            if (this.ArLieciaApatineSiena(myBoard.UzimtiLangeliai) || this.ArLieciaDetalesApacia(myBoard.UzimtiLangeliai) || ArIssikisaTaskai()) // Kaip šitą būtų galima padaryt protingiau?
             {
                 for (int i = 0; i < LangeliuKoord.Count; i++)
                     LangeliuKoord[i] = BuvusiosKoord[i];
@@ -534,5 +534,78 @@ namespace Tetris
             }
             return false;
         }
+
+        #region ArLiecia
+
+        public bool ArLieciaDetalesApacia(List<Langelis> UzimtiLangeliai)
+        {
+            for (int i = 0; i < LangeliuKoord.Count; i++)
+            {
+                Point koord = LangeliuKoord[i];
+                for (int a = 0; a < UzimtiLangeliai.Count; a++)
+                {
+                    if (koord.X + 1 == UzimtiLangeliai[a].Koord.X && koord.Y == UzimtiLangeliai[a].Koord.Y)
+                        return true;
+                }
+            }
+            return false;
+        }
+
+        public bool ArLieciaApatineSiena(List<Langelis> UzimtiLangeliai)
+        {
+            for (int u = 0; u < LangeliuKoord.Count; u++)
+                if (LangeliuKoord[u].X == 20)
+                    return true;
+            return false;
+        }
+
+        public bool ArLieciaDetalesKaire(List<Langelis> UzimtiLangeliai)
+        {
+            for (int i = 0; i < LangeliuKoord.Count; i++)
+            {
+                Point koord = LangeliuKoord[i];
+                for (int a = 0; a < UzimtiLangeliai.Count; a++)
+                    if (koord.Y - 1 == UzimtiLangeliai[a].Koord.Y && koord.X == UzimtiLangeliai[a].Koord.X)
+                        return true;
+            }
+            return false;
+        }
+
+        public bool ArLieciaKaireSiena(List<Langelis> UzimtiLangeliai)
+        {
+            bool ArSiekia = false;
+            for (int i = 0; i < LangeliuKoord.Count; i++)
+            {
+                Point koord = LangeliuKoord[i];
+                if (koord.Y == 1)
+                    ArSiekia = true;
+            }
+            return ArSiekia;
+        }
+
+        public bool ArLieciaDesineSiena(List<Langelis> UzimtiLangeliai)
+        {
+            for (int i = 0; i < LangeliuKoord.Count; i++)
+            {
+                Point koord = LangeliuKoord[i];
+                if (koord.Y == 10)
+                    return true;
+            }
+            return false;
+        }
+
+        public bool ArLieciaDetalesDesine(List<Langelis> UzimtiLangeliai)
+        {
+            for (int i = 0; i < LangeliuKoord.Count; i++)
+            {
+                Point koord = LangeliuKoord[i];
+                for (int a = 0; a < UzimtiLangeliai.Count; a++)
+                    if (koord.Y + 1 == UzimtiLangeliai[a].Koord.Y && koord.X == UzimtiLangeliai[a].Koord.X)
+                        return true;
+            }
+            return false;
+        }
+
+        #endregion
     }
 }
