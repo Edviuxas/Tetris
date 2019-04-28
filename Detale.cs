@@ -16,7 +16,7 @@ namespace Tetris
         }
         public List<Point> LangeliuKoord = new List<Point>();
         public int DetalesNr; // 1 - pailga; 2 - 1,3; 3 - 3,1; 4 - kvadratas; 5 - zigzag; 6 - T; 7 - zigzag
-        public int PasukimoKampas;
+        public int PasukimoKampas; // kokiu kampu dabar yra pasisukus detale
         public Color Spalva;
         private List<Point> BuvusiosKoord = new List<Point>();
 
@@ -515,7 +515,7 @@ namespace Tetris
                 default:
                     break;
             }
-            if (this.ArLieciaApatineSiena(myBoard.UzimtiLangeliai) || this.ArLieciaDetalesApacia(myBoard.UzimtiLangeliai) || ArIssikisaTaskai()) // Kaip šitą būtų galima padaryt protingiau?
+            if (this.ArLieciaApatineSiena(myBoard.UzimtiLangeliai) || this.ArLieciaDetalesApacia(myBoard.UzimtiLangeliai) || ArIssikisaTaskai())
             {
                 for (int i = 0; i < LangeliuKoord.Count; i++)
                     LangeliuKoord[i] = BuvusiosKoord[i];

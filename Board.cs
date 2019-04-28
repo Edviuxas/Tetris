@@ -20,6 +20,10 @@ namespace Tetris
         {
             //GeneruotiDetales();
         }
+        ~Board()
+        { 
+        
+        }
         public Canvas myCnv;
         public List<Langelis> VisiLangeliai = new List<Langelis>();
         public List<Langelis> UzimtiLangeliai = new List<Langelis>();
@@ -65,7 +69,6 @@ namespace Tetris
                     NuspalvintLangeli(lang, Colors.Black);
                     NuspalvintLangeli(Convert.ToInt32(lang.Koord.X + 1), Convert.ToInt32(lang.Koord.Y), brush.Color);
                     int indeksas = Convert.ToInt32(lang.Koord.X * 10 - 10 + lang.Koord.Y - 1);
-                    lang.Koord.X += 1;
                     UzimtiLangeliai[i] = VisiLangeliai[indeksas + 10];   
                 }
             }
@@ -88,7 +91,7 @@ namespace Tetris
             int Stulpelis = 1;
             int x = 0;
             int y = 0;
-            for (int i = 0; i < 200; i++) // nubraizom pagrindinius langelius REIKTU PERKELTI I BOARD KLASE?
+            for (int i = 0; i < 200; i++)
             {
                 Langelis lang = new Langelis();
                 lang.myRect = new Rectangle();

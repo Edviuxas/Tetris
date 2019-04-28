@@ -252,6 +252,7 @@ namespace Tetris
             {
                 if (myBoard.ArUzpildytaEile(i))
                 {
+                    //System.Threading.Thread.Sleep(500);
                     myBoard.PanaikintiEile(i);
                     Taskai += 100;
                     blockTaskai.Text = Taskai.ToString();
