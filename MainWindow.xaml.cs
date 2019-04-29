@@ -90,6 +90,15 @@ namespace Tetris
             d7.DetalesNr = 7;
             d7.PasukimoKampas = 0;
             d7.Spalva = Colors.LimeGreen;
+            Detale d8 = new Detale();
+            d8.LangeliuKoord.Add(new Point(1, 5));
+            d8.LangeliuKoord.Add(new Point(1, 4));
+            d8.LangeliuKoord.Add(new Point(1, 6));
+            d8.LangeliuKoord.Add(new Point(2, 4));
+            d8.LangeliuKoord.Add(new Point(2, 6));
+            d8.DetalesNr = 8;
+            d8.PasukimoKampas = 0;
+            d8.Spalva = Colors.DarkKhaki;
             VisosDetales.Add(d1);
             VisosDetales.Add(d2);
             VisosDetales.Add(d3);
@@ -97,6 +106,7 @@ namespace Tetris
             VisosDetales.Add(d5);
             VisosDetales.Add(d6);
             VisosDetales.Add(d7);
+            VisosDetales.Add(d8);
         }
 
         public Detale RandomDetale()
@@ -252,7 +262,6 @@ namespace Tetris
             {
                 if (myBoard.ArUzpildytaEile(i))
                 {
-                    //System.Threading.Thread.Sleep(500);
                     myBoard.PanaikintiEile(i);
                     Taskai += 100;
                     blockTaskai.Text = Taskai.ToString();
@@ -287,7 +296,6 @@ namespace Tetris
                 arGameOver = true;
                 GameOver GameOver = new GameOver(Menu, Taskai, this);
                 GameOver.Show();
-                //MessageBox.Show("Game over!");
             }
         }
 
