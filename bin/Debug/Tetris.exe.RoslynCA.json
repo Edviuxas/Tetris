@@ -1,0 +1,1082 @@
+{
+  "$schema": "http://json.schemastore.org/sarif-1.0.0",
+  "version": "1.0.0",
+  "runs": [
+    {
+      "tool": {
+        "name": "Microsoft (R) Visual C# Compiler",
+        "version": "3.9.0.0",
+        "fileVersion": "3.9.0-6.21160.10 (59eedc33)",
+        "semanticVersion": "3.9.0",
+        "language": "en-US"
+      },
+      "results": [
+        {
+          "ruleId": "S125",
+          "level": "warning",
+          "message": "Remove this commented out code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Edvinas/Desktop/New-folder/Projects/Tetris/Tetris/Board.cs",
+                "region": {
+                  "startLine": 16,
+                  "startColumn": 13,
+                  "endLine": 16,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1104",
+          "level": "warning",
+          "message": "Make this field 'private' and encapsulate it in a 'public' property.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Edvinas/Desktop/New-folder/Projects/Tetris/Tetris/Detale.cs",
+                "region": {
+                  "startLine": 17,
+                  "startColumn": 28,
+                  "endLine": 17,
+                  "endColumn": 61
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S125",
+          "level": "warning",
+          "message": "Remove this commented out code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Edvinas/Desktop/New-folder/Projects/Tetris/Tetris/MainWindow.xaml.cs",
+                "region": {
+                  "startLine": 94,
+                  "startColumn": 13,
+                  "endLine": 94,
+                  "endColumn": 40
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S125",
+          "level": "warning",
+          "message": "Remove this commented out code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Edvinas/Desktop/New-folder/Projects/Tetris/Tetris/MainWindow.xaml.cs",
+                "region": {
+                  "startLine": 110,
+                  "startColumn": 13,
+                  "endLine": 110,
+                  "endColumn": 36
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1104",
+          "level": "warning",
+          "message": "Make this field 'private' and encapsulate it in a 'public' property.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Edvinas/Desktop/New-folder/Projects/Tetris/Tetris/Board.cs",
+                "region": {
+                  "startLine": 22,
+                  "startColumn": 23,
+                  "endLine": 22,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2933",
+          "level": "warning",
+          "message": "Make 'BuvusiosKoord' 'readonly'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Edvinas/Desktop/New-folder/Projects/Tetris/Tetris/Detale.cs",
+                "region": {
+                  "startLine": 21,
+                  "startColumn": 29,
+                  "endLine": 21,
+                  "endColumn": 42
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1104",
+          "level": "warning",
+          "message": "Make this field 'private' and encapsulate it in a 'public' property.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Edvinas/Desktop/New-folder/Projects/Tetris/Tetris/Detale.cs",
+                "region": {
+                  "startLine": 18,
+                  "startColumn": 20,
+                  "endLine": 18,
+                  "endColumn": 29
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1104",
+          "level": "warning",
+          "message": "Make this field 'private' and encapsulate it in a 'public' property.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Edvinas/Desktop/New-folder/Projects/Tetris/Tetris/Board.cs",
+                "region": {
+                  "startLine": 23,
+                  "startColumn": 31,
+                  "endLine": 23,
+                  "endColumn": 67
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1104",
+          "level": "warning",
+          "message": "Make this field 'private' and encapsulate it in a 'public' property.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Edvinas/Desktop/New-folder/Projects/Tetris/Tetris/Detale.cs",
+                "region": {
+                  "startLine": 19,
+                  "startColumn": 20,
+                  "endLine": 19,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1104",
+          "level": "warning",
+          "message": "Make this field 'private' and encapsulate it in a 'public' property.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Edvinas/Desktop/New-folder/Projects/Tetris/Tetris/Board.cs",
+                "region": {
+                  "startLine": 24,
+                  "startColumn": 31,
+                  "endLine": 24,
+                  "endColumn": 69
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1104",
+          "level": "warning",
+          "message": "Make this field 'private' and encapsulate it in a 'public' property.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Edvinas/Desktop/New-folder/Projects/Tetris/Tetris/Detale.cs",
+                "region": {
+                  "startLine": 20,
+                  "startColumn": 22,
+                  "endLine": 20,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1104",
+          "level": "warning",
+          "message": "Make this field 'private' and encapsulate it in a 'public' property.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Edvinas/Desktop/New-folder/Projects/Tetris/Tetris/Langelis.cs",
+                "region": {
+                  "startLine": 17,
+                  "startColumn": 26,
+                  "endLine": 17,
+                  "endColumn": 32
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1104",
+          "level": "warning",
+          "message": "Make this field 'private' and encapsulate it in a 'public' property.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Edvinas/Desktop/New-folder/Projects/Tetris/Tetris/Langelis.cs",
+                "region": {
+                  "startLine": 18,
+                  "startColumn": 22,
+                  "endLine": 18,
+                  "endColumn": 27
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1104",
+          "level": "warning",
+          "message": "Make this field 'private' and encapsulate it in a 'public' property.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Edvinas/Desktop/New-folder/Projects/Tetris/Tetris/Menu.xaml.cs",
+                "region": {
+                  "startLine": 27,
+                  "startColumn": 26,
+                  "endLine": 27,
+                  "endColumn": 60
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1104",
+          "level": "warning",
+          "message": "Make this field 'private' and encapsulate it in a 'public' property.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Edvinas/Desktop/New-folder/Projects/Tetris/Tetris/MainWindow.xaml.cs",
+                "region": {
+                  "startLine": 33,
+                  "startColumn": 29,
+                  "endLine": 33,
+                  "endColumn": 62
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2245",
+          "level": "warning",
+          "message": "Make sure that using this pseudorandom number generator is safe here.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Edvinas/Desktop/New-folder/Projects/Tetris/Tetris/MainWindow.xaml.cs",
+                "region": {
+                  "startLine": 30,
+                  "startColumn": 22,
+                  "endLine": 30,
+                  "endColumn": 62
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1117",
+          "level": "warning",
+          "message": "Rename 'd' which hides the field with the same name.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Edvinas/Desktop/New-folder/Projects/Tetris/Tetris/MainWindow.xaml.cs",
+                "region": {
+                  "startLine": 115,
+                  "startColumn": 20,
+                  "endLine": 115,
+                  "endColumn": 21
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1854",
+          "level": "warning",
+          "message": "Remove this useless assignment to local variable 'd'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Edvinas/Desktop/New-folder/Projects/Tetris/Tetris/MainWindow.xaml.cs",
+                "region": {
+                  "startLine": 115,
+                  "startColumn": 22,
+                  "endLine": 115,
+                  "endColumn": 36
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1125",
+          "level": "warning",
+          "message": "Remove the unnecessary Boolean literal(s).",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Edvinas/Desktop/New-folder/Projects/Tetris/Tetris/Menu.xaml.cs",
+                "region": {
+                  "startLine": 49,
+                  "startColumn": 48,
+                  "endLine": 49,
+                  "endColumn": 55
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1854",
+          "level": "warning",
+          "message": "Remove this useless assignment to local variable 'dv'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Edvinas/Desktop/New-folder/Projects/Tetris/Tetris/Menu.xaml.cs",
+                "region": {
+                  "startLine": 73,
+                  "startColumn": 25,
+                  "endLine": 73,
+                  "endColumn": 41
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S3923",
+          "level": "warning",
+          "message": "Remove this conditional structure or edit its code blocks so that they're not all the same.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Edvinas/Desktop/New-folder/Projects/Tetris/Tetris/Menu.xaml.cs",
+                "region": {
+                  "startLine": 97,
+                  "startColumn": 21,
+                  "endLine": 97,
+                  "endColumn": 23
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S3776",
+          "level": "warning",
+          "message": "Refactor this method to reduce its Cognitive Complexity from 70 to the 15 allowed.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Edvinas/Desktop/New-folder/Projects/Tetris/Tetris/MainWindow.xaml.cs",
+                "region": {
+                  "startLine": 139,
+                  "startColumn": 14,
+                  "endLine": 139,
+                  "endColumn": 32
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Edvinas/Desktop/New-folder/Projects/Tetris/Tetris/MainWindow.xaml.cs",
+                "region": {
+                  "startLine": 141,
+                  "startColumn": 13,
+                  "endLine": 141,
+                  "endColumn": 15
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Edvinas/Desktop/New-folder/Projects/Tetris/Tetris/MainWindow.xaml.cs",
+                "region": {
+                  "startLine": 143,
+                  "startColumn": 17,
+                  "endLine": 143,
+                  "endColumn": 23
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Edvinas/Desktop/New-folder/Projects/Tetris/Tetris/MainWindow.xaml.cs",
+                "region": {
+                  "startLine": 148,
+                  "startColumn": 25,
+                  "endLine": 148,
+                  "endColumn": 28
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Edvinas/Desktop/New-folder/Projects/Tetris/Tetris/MainWindow.xaml.cs",
+                "region": {
+                  "startLine": 155,
+                  "startColumn": 25,
+                  "endLine": 155,
+                  "endColumn": 28
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Edvinas/Desktop/New-folder/Projects/Tetris/Tetris/MainWindow.xaml.cs",
+                "region": {
+                  "startLine": 162,
+                  "startColumn": 25,
+                  "endLine": 162,
+                  "endColumn": 27
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Edvinas/Desktop/New-folder/Projects/Tetris/Tetris/MainWindow.xaml.cs",
+                "region": {
+                  "startLine": 162,
+                  "startColumn": 76,
+                  "endLine": 162,
+                  "endColumn": 78
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Edvinas/Desktop/New-folder/Projects/Tetris/Tetris/MainWindow.xaml.cs",
+                "region": {
+                  "startLine": 164,
+                  "startColumn": 29,
+                  "endLine": 164,
+                  "endColumn": 32
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Edvinas/Desktop/New-folder/Projects/Tetris/Tetris/MainWindow.xaml.cs",
+                "region": {
+                  "startLine": 171,
+                  "startColumn": 29,
+                  "endLine": 171,
+                  "endColumn": 32
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Edvinas/Desktop/New-folder/Projects/Tetris/Tetris/MainWindow.xaml.cs",
+                "region": {
+                  "startLine": 178,
+                  "startColumn": 25,
+                  "endLine": 178,
+                  "endColumn": 27
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Edvinas/Desktop/New-folder/Projects/Tetris/Tetris/MainWindow.xaml.cs",
+                "region": {
+                  "startLine": 181,
+                  "startColumn": 29,
+                  "endLine": 181,
+                  "endColumn": 32
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Edvinas/Desktop/New-folder/Projects/Tetris/Tetris/MainWindow.xaml.cs",
+                "region": {
+                  "startLine": 186,
+                  "startColumn": 29,
+                  "endLine": 186,
+                  "endColumn": 32
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Edvinas/Desktop/New-folder/Projects/Tetris/Tetris/MainWindow.xaml.cs",
+                "region": {
+                  "startLine": 188,
+                  "startColumn": 33,
+                  "endLine": 188,
+                  "endColumn": 35
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Edvinas/Desktop/New-folder/Projects/Tetris/Tetris/MainWindow.xaml.cs",
+                "region": {
+                  "startLine": 199,
+                  "startColumn": 25,
+                  "endLine": 199,
+                  "endColumn": 27
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Edvinas/Desktop/New-folder/Projects/Tetris/Tetris/MainWindow.xaml.cs",
+                "region": {
+                  "startLine": 199,
+                  "startColumn": 77,
+                  "endLine": 199,
+                  "endColumn": 79
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Edvinas/Desktop/New-folder/Projects/Tetris/Tetris/MainWindow.xaml.cs",
+                "region": {
+                  "startLine": 201,
+                  "startColumn": 29,
+                  "endLine": 201,
+                  "endColumn": 32
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Edvinas/Desktop/New-folder/Projects/Tetris/Tetris/MainWindow.xaml.cs",
+                "region": {
+                  "startLine": 208,
+                  "startColumn": 29,
+                  "endLine": 208,
+                  "endColumn": 32
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Edvinas/Desktop/New-folder/Projects/Tetris/Tetris/MainWindow.xaml.cs",
+                "region": {
+                  "startLine": 215,
+                  "startColumn": 25,
+                  "endLine": 215,
+                  "endColumn": 27
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Edvinas/Desktop/New-folder/Projects/Tetris/Tetris/MainWindow.xaml.cs",
+                "region": {
+                  "startLine": 218,
+                  "startColumn": 29,
+                  "endLine": 218,
+                  "endColumn": 32
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Edvinas/Desktop/New-folder/Projects/Tetris/Tetris/MainWindow.xaml.cs",
+                "region": {
+                  "startLine": 228,
+                  "startColumn": 25,
+                  "endLine": 228,
+                  "endColumn": 28
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Edvinas/Desktop/New-folder/Projects/Tetris/Tetris/MainWindow.xaml.cs",
+                "region": {
+                  "startLine": 233,
+                  "startColumn": 25,
+                  "endLine": 233,
+                  "endColumn": 30
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Edvinas/Desktop/New-folder/Projects/Tetris/Tetris/MainWindow.xaml.cs",
+                "region": {
+                  "startLine": 233,
+                  "startColumn": 81,
+                  "endLine": 233,
+                  "endColumn": 83
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Edvinas/Desktop/New-folder/Projects/Tetris/Tetris/MainWindow.xaml.cs",
+                "region": {
+                  "startLine": 235,
+                  "startColumn": 29,
+                  "endLine": 235,
+                  "endColumn": 32
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Edvinas/Desktop/New-folder/Projects/Tetris/Tetris/MainWindow.xaml.cs",
+                "region": {
+                  "startLine": 242,
+                  "startColumn": 25,
+                  "endLine": 242,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": "+1",
+              "1": "+2 (incl 1 for nesting)",
+              "10": "+4 (incl 3 for nesting)",
+              "11": "+5 (incl 4 for nesting)",
+              "12": "+3 (incl 2 for nesting)",
+              "13": "+1",
+              "14": "+4 (incl 3 for nesting)",
+              "15": "+4 (incl 3 for nesting)",
+              "16": "+3 (incl 2 for nesting)",
+              "17": "+4 (incl 3 for nesting)",
+              "18": "+3 (incl 2 for nesting)",
+              "19": "+3 (incl 2 for nesting)",
+              "2": "+3 (incl 2 for nesting)",
+              "20": "+1",
+              "21": "+4 (incl 3 for nesting)",
+              "22": "+3 (incl 2 for nesting)",
+              "3": "+3 (incl 2 for nesting)",
+              "4": "+3 (incl 2 for nesting)",
+              "5": "+1",
+              "6": "+4 (incl 3 for nesting)",
+              "7": "+4 (incl 3 for nesting)",
+              "8": "+3 (incl 2 for nesting)",
+              "9": "+4 (incl 3 for nesting)"
+            }
+          }
+        },
+        {
+          "ruleId": "S3776",
+          "level": "warning",
+          "message": "Refactor this method to reduce its Cognitive Complexity from 20 to the 15 allowed.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Edvinas/Desktop/New-folder/Projects/Tetris/Tetris/Detale.cs",
+                "region": {
+                  "startLine": 23,
+                  "startColumn": 21,
+                  "endLine": 23,
+                  "endColumn": 37
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Edvinas/Desktop/New-folder/Projects/Tetris/Tetris/Detale.cs",
+                "region": {
+                  "startLine": 26,
+                  "startColumn": 13,
+                  "endLine": 26,
+                  "endColumn": 16
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Edvinas/Desktop/New-folder/Projects/Tetris/Tetris/Detale.cs",
+                "region": {
+                  "startLine": 30,
+                  "startColumn": 13,
+                  "endLine": 30,
+                  "endColumn": 19
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Edvinas/Desktop/New-folder/Projects/Tetris/Tetris/Detale.cs",
+                "region": {
+                  "startLine": 33,
+                  "startColumn": 21,
+                  "endLine": 33,
+                  "endColumn": 27
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Edvinas/Desktop/New-folder/Projects/Tetris/Tetris/Detale.cs",
+                "region": {
+                  "startLine": 115,
+                  "startColumn": 21,
+                  "endLine": 115,
+                  "endColumn": 27
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Edvinas/Desktop/New-folder/Projects/Tetris/Tetris/Detale.cs",
+                "region": {
+                  "startLine": 197,
+                  "startColumn": 21,
+                  "endLine": 197,
+                  "endColumn": 27
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Edvinas/Desktop/New-folder/Projects/Tetris/Tetris/Detale.cs",
+                "region": {
+                  "startLine": 279,
+                  "startColumn": 21,
+                  "endLine": 279,
+                  "endColumn": 27
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Edvinas/Desktop/New-folder/Projects/Tetris/Tetris/Detale.cs",
+                "region": {
+                  "startLine": 356,
+                  "startColumn": 21,
+                  "endLine": 356,
+                  "endColumn": 27
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Edvinas/Desktop/New-folder/Projects/Tetris/Tetris/Detale.cs",
+                "region": {
+                  "startLine": 438,
+                  "startColumn": 21,
+                  "endLine": 438,
+                  "endColumn": 27
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Edvinas/Desktop/New-folder/Projects/Tetris/Tetris/Detale.cs",
+                "region": {
+                  "startLine": 518,
+                  "startColumn": 13,
+                  "endLine": 518,
+                  "endColumn": 15
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Edvinas/Desktop/New-folder/Projects/Tetris/Tetris/Detale.cs",
+                "region": {
+                  "startLine": 518,
+                  "startColumn": 68,
+                  "endLine": 518,
+                  "endColumn": 70
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Edvinas/Desktop/New-folder/Projects/Tetris/Tetris/Detale.cs",
+                "region": {
+                  "startLine": 520,
+                  "startColumn": 17,
+                  "endLine": 520,
+                  "endColumn": 20
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Edvinas/Desktop/New-folder/Projects/Tetris/Tetris/Detale.cs",
+                "region": {
+                  "startLine": 522,
+                  "startColumn": 17,
+                  "endLine": 522,
+                  "endColumn": 19
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": "+1",
+              "1": "+1",
+              "10": "+2 (incl 1 for nesting)",
+              "11": "+2 (incl 1 for nesting)",
+              "2": "+2 (incl 1 for nesting)",
+              "3": "+2 (incl 1 for nesting)",
+              "4": "+2 (incl 1 for nesting)",
+              "5": "+2 (incl 1 for nesting)",
+              "6": "+2 (incl 1 for nesting)",
+              "7": "+2 (incl 1 for nesting)",
+              "8": "+1",
+              "9": "+1"
+            }
+          }
+        }
+      ],
+      "rules": {
+        "S1104": {
+          "id": "S1104",
+          "shortDescription": "Fields should not have public accessibility",
+          "fullDescription": "Public fields in public classes do not respect the encapsulation principle and has three main disadvantages:",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-1104",
+          "properties": {
+            "category": "Minor Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "SonarWay",
+              "MainSourceScope"
+            ]
+          }
+        },
+        "S1117": {
+          "id": "S1117",
+          "shortDescription": "Local variables should not shadow class fields",
+          "fullDescription": "Overriding or shadowing a variable declared in an outer scope can strongly impact the readability, and therefore the maintainability, of a piece of code. Further, it could lead maintainers to introduce bugs because they think they're using one variable but are really using another.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-1117",
+          "properties": {
+            "category": "Major Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "SonarWay",
+              "MainSourceScope",
+              "TestSourceScope"
+            ]
+          }
+        },
+        "S1125": {
+          "id": "S1125",
+          "shortDescription": "Boolean literals should not be redundant",
+          "fullDescription": "Redundant Boolean literals should be removed from expressions to improve readability.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-1125",
+          "properties": {
+            "category": "Minor Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "SonarWay",
+              "MainSourceScope",
+              "TestSourceScope"
+            ]
+          }
+        },
+        "S125": {
+          "id": "S125",
+          "shortDescription": "Sections of code should not be commented out",
+          "fullDescription": "Programmers should not comment out code as it bloats programs and reduces readability.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-125",
+          "properties": {
+            "category": "Major Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "SonarWay",
+              "MainSourceScope",
+              "TestSourceScope"
+            ]
+          }
+        },
+        "S1854": {
+          "id": "S1854",
+          "shortDescription": "Unused assignments should be removed",
+          "fullDescription": "A dead store happens when a local variable is assigned a value that is not read by any subsequent instruction. Calculating or retrieving a value only to then overwrite it or throw it away, could indicate a serious error in the code. Even if it's not an error, it is at best a waste of resources. Therefore all calculated values should be used.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-1854",
+          "properties": {
+            "category": "Major Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "SonarWay",
+              "MainSourceScope",
+              "TestSourceScope"
+            ]
+          }
+        },
+        "S2245": {
+          "id": "S2245",
+          "shortDescription": "Using pseudorandom number generators (PRNGs) is security-sensitive",
+          "fullDescription": "Using pseudorandom number generators (PRNGs) is security-sensitive. For example, it has led in the past to the following vulnerabilities:",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-2245",
+          "properties": {
+            "category": "Critical Security Hotspot",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "SonarWay",
+              "MainSourceScope",
+              "NotConfigurable"
+            ]
+          }
+        },
+        "S2933": {
+          "id": "S2933",
+          "shortDescription": "Fields that are only assigned in the constructor should be \"readonly\"",
+          "fullDescription": "readonly fields can only be assigned in a class constructor. If a class has a field that's not marked readonly but is only set in the constructor, it could cause confusion about the field's intended use. To avoid confusion, such fields should be marked readonly to make their intended use explicit, and to prevent future maintainers from inadvertently changing their use.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-2933",
+          "properties": {
+            "category": "Major Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "SonarWay",
+              "MainSourceScope",
+              "TestSourceScope"
+            ]
+          }
+        },
+        "S3776": {
+          "id": "S3776",
+          "shortDescription": "Cognitive Complexity of methods should not be too high",
+          "fullDescription": "Cognitive Complexity is a measure of how hard the control flow of a method is to understand. Methods with high Cognitive Complexity will be difficult to maintain.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-3776",
+          "properties": {
+            "category": "Critical Code Smell",
+            "isEnabledByDefault": false,
+            "tags": [
+              "C#",
+              "SonarWay",
+              "MainSourceScope",
+              "TestSourceScope"
+            ]
+          }
+        },
+        "S3923": {
+          "id": "S3923",
+          "shortDescription": "All branches in a conditional structure should not have exactly the same implementation",
+          "fullDescription": "Having all branches in a switch or if chain with the same implementation is an error. Either a copy-paste error was made and something different should be executed, or there shouldn't be a switch/if chain at all.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-3923",
+          "properties": {
+            "category": "Major Bug",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "SonarWay",
+              "MainSourceScope",
+              "TestSourceScope"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

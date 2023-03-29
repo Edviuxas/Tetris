@@ -33,7 +33,7 @@ namespace Tetris
 
         private void btnPradeti_Click(object sender, RoutedEventArgs e)
         {
-            this.Hide();
+            Hide();
             MainWindow Main = new MainWindow(this);
             Main.Show();
         }
@@ -46,7 +46,7 @@ namespace Tetris
             for (int i = 1; i <= Naujas.Rows.Count; i++)
             {
                 DataRow dr = Naujas.Rows[i - 1];
-                if (arDidintiLikusiusElementus == true)
+                if (arDidintiLikusiusElementus)
                     dr["Vieta"] = i + 1;
                 else
                 {
@@ -68,10 +68,9 @@ namespace Tetris
             return Naujas;
         }
 
-        private void Sort()
+        private void SortLeaderBoard()
         {
-            DataView dv = new DataView();
-            dv = TableLeaderboard.DefaultView;
+            DataView dv = TableLeaderboard.DefaultView;
             dv.Sort = "Vieta ASC";
             TableLeaderboard = dv.ToTable();
             int PaskutinisIndeksas = TableLeaderboard.Rows.Count;
@@ -84,7 +83,7 @@ namespace Tetris
 
         private DataTable GautiDataTable(string path)
         {
-            using (var pck = new OfficeOpenXml.ExcelPackage())
+            using (var pck = new ExcelPackage())
             {
                 using (var stream = File.OpenRead(path))
                 {
@@ -153,7 +152,7 @@ namespace Tetris
         private void btnHighScore_Click(object sender, RoutedEventArgs e)
         {
             Leaderboard Leaderboard = new Leaderboard(TableLeaderboard);
-            Sort();
+            SortLeaderBoard();
             Leaderboard.ShowDialog();
         }
 

@@ -19,53 +19,53 @@ namespace Tetris
     /// </summary>
     public partial class GameOver : Window
     {
-        int Taskai;
-        Menu Menu;
-        MainWindow Main;
-        bool ArIsjungti = true;
+        int points;
+        Menu menu;
+        MainWindow main;
+        bool shouldTurnOff = true;
 
-        public GameOver(Menu menu, int Score, MainWindow main)
+        public GameOver(Menu menu, int score, MainWindow main)
         {
-            Main = main;
-            Menu = menu;
-            Taskai = Score;
+            this.main = main;
+            this.menu = menu;
+            points = score;
             InitializeComponent();
         }
 
         private void Window_Loaded_1(object sender, RoutedEventArgs e)
         {
-            blockTaskai.Text = Taskai.ToString();
+            blockTaskai.Text = points.ToString();
         }
 
         private void btnMenu_Click(object sender, RoutedEventArgs e)
         {
-            ArIsjungti = false;
+            shouldTurnOff = false;
             this.Close();
-            Main.Close();
-            Menu.Show();
+            main.Close();
+            menu.Show();
         }
 
         private void btnIssaugoti_Click(object sender, RoutedEventArgs e)
         {
-            ArIsjungti = false;
-            Menu.TableLeaderboard = Menu.PridetiIDataTable(DateTime.Now.ToString("yyyy/MM/dd"), Taskai);
+            shouldTurnOff = false;
+            menu.leaderboardTable = menu.addToDataTable(DateTime.Now.ToString("yyyy/MM/dd"), points);
             this.Close();
-            Main.Close();
-            Menu.Show();
+            main.Close();
+            menu.Show();
         }
 
         private void btnIsNaujo_Click(object sender, RoutedEventArgs e)
         {
-            ArIsjungti = false;
+            shouldTurnOff = false;
             this.Close();
-            Main.Close();
+            main.Close();
             MainWindow main = new MainWindow(Menu);
             main.Show();
         }
 
         private void Window_Closing_1(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            if (ArIsjungti)
+            if (shouldTurnOff)
                 Application.Current.Shutdown();
         }
     }

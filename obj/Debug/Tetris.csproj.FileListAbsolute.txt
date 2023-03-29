@@ -1,0 +1,63 @@
+c:\users\edvinas\documents\visual studio 2012\Projects\Tetris\Tetris\bin\Debug\Tetris.exe.config
+c:\users\edvinas\documents\visual studio 2012\Projects\Tetris\Tetris\bin\Debug\Tetris.exe
+c:\users\edvinas\documents\visual studio 2012\Projects\Tetris\Tetris\bin\Debug\Tetris.pdb
+c:\users\edvinas\documents\visual studio 2012\Projects\Tetris\Tetris\obj\Debug\MainWindow.baml
+c:\users\edvinas\documents\visual studio 2012\Projects\Tetris\Tetris\obj\Debug\MainWindow.g.cs
+c:\users\edvinas\documents\visual studio 2012\Projects\Tetris\Tetris\obj\Debug\App.g.cs
+c:\users\edvinas\documents\visual studio 2012\Projects\Tetris\Tetris\obj\Debug\Tetris_MarkupCompile.cache
+c:\users\edvinas\documents\visual studio 2012\Projects\Tetris\Tetris\obj\Debug\Tetris.g.resources
+c:\users\edvinas\documents\visual studio 2012\Projects\Tetris\Tetris\obj\Debug\Tetris.Properties.Resources.resources
+c:\users\edvinas\documents\visual studio 2012\Projects\Tetris\Tetris\obj\Debug\Tetris.csproj.GenerateResource.Cache
+c:\users\edvinas\documents\visual studio 2012\Projects\Tetris\Tetris\obj\Debug\Tetris.exe
+c:\users\edvinas\documents\visual studio 2012\Projects\Tetris\Tetris\obj\Debug\Tetris.pdb
+C:\Users\Edvinas\documents\visual studio 2012\Projects\Tetris\Tetris\obj\Debug\Tetris.csprojResolveAssemblyReference.cache
+C:\Users\Edvinas\documents\visual studio 2012\Projects\Tetris\Tetris\obj\Debug\Menu.baml
+C:\Users\Edvinas\documents\visual studio 2012\Projects\Tetris\Tetris\obj\Debug\Menu.g.cs
+C:\Users\Edvinas\documents\visual studio 2012\Projects\Tetris\Tetris\obj\Debug\GameOver.baml
+C:\Users\Edvinas\documents\visual studio 2012\Projects\Tetris\Tetris\obj\Debug\GameOver.g.cs
+C:\Users\Edvinas\documents\visual studio 2012\Projects\Tetris\Tetris\bin\Debug\EPPlus.dll
+C:\Users\Edvinas\documents\visual studio 2012\Projects\Tetris\Tetris\bin\Debug\EPPlus.xml
+C:\Users\Edvinas\documents\visual studio 2012\Projects\Tetris\Tetris\obj\Debug\Leaderboard.baml
+C:\Users\Edvinas\documents\visual studio 2012\Projects\Tetris\Tetris\obj\Debug\Leaderboard.g.cs
+C:\Users\Edvinas\Desktop\New folder\Projects\Tetris\Tetris\bin\Debug\Tetris.exe.config
+C:\Users\Edvinas\Desktop\New folder\Projects\Tetris\Tetris\obj\Debug\Tetris.exe
+C:\Users\Edvinas\Desktop\New folder\Projects\Tetris\Tetris\obj\Debug\Tetris.pdb
+C:\Users\Edvinas\Desktop\New folder\Projects\Tetris\Tetris\bin\Debug\Tetris.exe
+C:\Users\Edvinas\Desktop\New folder\Projects\Tetris\Tetris\bin\Debug\Tetris.pdb
+C:\Users\Edvinas\Desktop\New folder\Projects\Tetris\Tetris\bin\Debug\EPPlus.xml
+C:\Users\Edvinas\Desktop\New folder\Projects\Tetris\Tetris\obj\Debug\Tetris.csprojResolveAssemblyReference.cache
+C:\Users\Edvinas\Desktop\New folder\Projects\Tetris\Tetris\obj\Debug\GameOver.baml
+C:\Users\Edvinas\Desktop\New folder\Projects\Tetris\Tetris\obj\Debug\Leaderboard.baml
+C:\Users\Edvinas\Desktop\New folder\Projects\Tetris\Tetris\obj\Debug\MainWindow.baml
+C:\Users\Edvinas\Desktop\New folder\Projects\Tetris\Tetris\obj\Debug\Menu.baml
+C:\Users\Edvinas\Desktop\New folder\Projects\Tetris\Tetris\obj\Debug\GameOver.g.cs
+C:\Users\Edvinas\Desktop\New folder\Projects\Tetris\Tetris\obj\Debug\Leaderboard.g.cs
+C:\Users\Edvinas\Desktop\New folder\Projects\Tetris\Tetris\obj\Debug\MainWindow.g.cs
+C:\Users\Edvinas\Desktop\New folder\Projects\Tetris\Tetris\obj\Debug\Menu.g.cs
+C:\Users\Edvinas\Desktop\New folder\Projects\Tetris\Tetris\obj\Debug\App.g.cs
+C:\Users\Edvinas\Desktop\New folder\Projects\Tetris\Tetris\obj\Debug\Tetris_MarkupCompile.cache
+C:\Users\Edvinas\Desktop\New folder\Projects\Tetris\Tetris\obj\Debug\Tetris.g.resources
+C:\Users\Edvinas\Desktop\New folder\Projects\Tetris\Tetris\obj\Debug\Tetris.Properties.Resources.resources
+C:\Users\Edvinas\Desktop\New folder\Projects\Tetris\Tetris\obj\Debug\Tetris.csproj.GenerateResource.Cache
+C:\Users\Edvinas\Desktop\New-folder\Projects\Tetris\Tetris\bin\Debug\Tetris.exe.config
+C:\Users\Edvinas\Desktop\New-folder\Projects\Tetris\Tetris\obj\Debug\Tetris.exe
+C:\Users\Edvinas\Desktop\New-folder\Projects\Tetris\Tetris\obj\Debug\Tetris.pdb
+C:\Users\Edvinas\Desktop\New-folder\Projects\Tetris\Tetris\bin\Debug\Tetris.exe
+C:\Users\Edvinas\Desktop\New-folder\Projects\Tetris\Tetris\bin\Debug\Tetris.pdb
+C:\Users\Edvinas\Desktop\New-folder\Projects\Tetris\Tetris\bin\Debug\EPPlus.xml
+C:\Users\Edvinas\Desktop\New-folder\Projects\Tetris\Tetris\obj\Debug\GameOver.baml
+C:\Users\Edvinas\Desktop\New-folder\Projects\Tetris\Tetris\obj\Debug\Leaderboard.baml
+C:\Users\Edvinas\Desktop\New-folder\Projects\Tetris\Tetris\obj\Debug\MainWindow.baml
+C:\Users\Edvinas\Desktop\New-folder\Projects\Tetris\Tetris\obj\Debug\Menu.baml
+C:\Users\Edvinas\Desktop\New-folder\Projects\Tetris\Tetris\obj\Debug\GameOver.g.cs
+C:\Users\Edvinas\Desktop\New-folder\Projects\Tetris\Tetris\obj\Debug\Leaderboard.g.cs
+C:\Users\Edvinas\Desktop\New-folder\Projects\Tetris\Tetris\obj\Debug\MainWindow.g.cs
+C:\Users\Edvinas\Desktop\New-folder\Projects\Tetris\Tetris\obj\Debug\Menu.g.cs
+C:\Users\Edvinas\Desktop\New-folder\Projects\Tetris\Tetris\obj\Debug\App.g.cs
+C:\Users\Edvinas\Desktop\New-folder\Projects\Tetris\Tetris\obj\Debug\Tetris_MarkupCompile.cache
+C:\Users\Edvinas\Desktop\New-folder\Projects\Tetris\Tetris\obj\Debug\Tetris.g.resources
+C:\Users\Edvinas\Desktop\New-folder\Projects\Tetris\Tetris\obj\Debug\Tetris.Properties.Resources.resources
+C:\Users\Edvinas\Desktop\New-folder\Projects\Tetris\Tetris\obj\Debug\Tetris.csproj.GenerateResource.Cache
+C:\Users\Edvinas\Desktop\New-folder\Projects\Tetris\Tetris\obj\Debug\Tetris.csprojAssemblyReference.cache
+C:\Users\Edvinas\Desktop\New-folder\Projects\Tetris\Tetris\obj\Debug\Tetris.csproj.CoreCompileInputs.cache
+C:\Users\Edvinas\Desktop\New-folder\Projects\Tetris\Tetris\obj\Debug\Tetris.csproj.CopyComplete

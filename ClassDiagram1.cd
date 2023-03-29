@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="Tetris.App">
+    <Position X="5.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>App.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Tetris.Detale">
+    <Position X="12.5" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAIAAAAIQAQAACBIAAAAAAAAAQAyAIAAAAAAAAA=</HashCode>
+      <FileName>Detale.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Tetris.GameOver" BaseTypeListCollapsed="true">
+    <Position X="15" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAMAAAAAQAAAAAABAAAAAAAAAAIAAAAABAADAAAAAA=</HashCode>
+      <FileName>GameOver.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tetris.Langelis">
+    <Position X="7" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAQAAAAAAAABAAAAAAAAAAAA=</HashCode>
+      <FileName>Langelis.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Tetris.LargeBoard">
+    <Position X="9.75" Y="3.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAgAAAAAAAAAAAAEACAgAAAAAAAACAAEAAAAIAAA=</HashCode>
+      <FileName>LargeBoard.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Tetris.Leaderboard" BaseTypeListCollapsed="true">
+    <Position X="12.5" Y="4.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Leaderboard.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tetris.MainWindow" BaseTypeListCollapsed="true">
+    <Position X="17.25" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AJAMARGgQQgQAhAAAIAEQAAAAAAIECAEAAwAAgEYAAA=</HashCode>
+      <FileName>MainWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tetris.Menu" BaseTypeListCollapsed="true">
+    <Position X="7" Y="2.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAQAAAQAABAAAAAAIAAAAAAAICAAAAQAACAAAAAA=</HashCode>
+      <FileName>Menu.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tetris.SmallBoard">
+    <Position X="9.75" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAgAAACAAAAACAAAAAAAAABAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>SmallBoard.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Tetris.Properties.Resources">
+    <Position X="4" Y="3.25" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Tetris.Properties.Settings">
+    <Position X="15" Y="4" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
