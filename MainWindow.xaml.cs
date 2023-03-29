@@ -23,99 +23,99 @@ namespace Tetris
     {
         LargeBoard myBoard = new LargeBoard();
         SmallBoard smallBoard = new SmallBoard();
-        Detale d;
-        Detale BusimaDetale;
+        Piece d;
+        Piece futurePiece;
         DispatcherTimer t;
-        Menu Menu;
+        Menu menu;
         Random rnd = new Random(Guid.NewGuid().GetHashCode());
-        int Taskai = 0;
-        bool arGameOver = false;
-        public List<Detale> VisosDetales = new List<Detale>();
+        int points = 0;
+        bool isGameOver = false;
+        public List<Piece> allPieces = new List<Piece>();
 
-        public void GeneruotiDetales()
+        public void generatePieces()
         {
-            VisosDetales.Clear();
-            Detale d1 = new Detale();
-            d1.LangeliuKoord.Add(new Point(1, 4));
-            d1.LangeliuKoord.Add(new Point(1, 5));
-            d1.LangeliuKoord.Add(new Point(1, 6));
-            d1.LangeliuKoord.Add(new Point(1, 7));
-            d1.DetalesNr = 1;
-            d1.PasukimoKampas = 0;
-            d1.Spalva = Colors.Cyan;
+            allPieces.Clear();
+            Piece d1 = new Piece();
+            d1.coordsOfSquare.Add(new Point(1, 4));
+            d1.coordsOfSquare.Add(new Point(1, 5));
+            d1.coordsOfSquare.Add(new Point(1, 6));
+            d1.coordsOfSquare.Add(new Point(1, 7));
+            d1.pieceNo = 1;
+            d1.rotationAngle = 0;
+            d1.color = Colors.Cyan;
 
-            Detale d2 = new Detale();
-            d2.LangeliuKoord.Add(new Point(2, 6));
-            d2.LangeliuKoord.Add(new Point(1, 6));
-            d2.LangeliuKoord.Add(new Point(1, 5));
-            d2.LangeliuKoord.Add(new Point(1, 4));
-            d2.DetalesNr = 2;
-            d2.PasukimoKampas = 0;
-            d2.Spalva = Colors.Blue;
+            Piece d2 = new Piece();
+            d2.coordsOfSquare.Add(new Point(2, 6));
+            d2.coordsOfSquare.Add(new Point(1, 6));
+            d2.coordsOfSquare.Add(new Point(1, 5));
+            d2.coordsOfSquare.Add(new Point(1, 4));
+            d2.pieceNo = 2;
+            d2.rotationAngle = 0;
+            d2.color = Colors.Blue;
 
-            Detale d3 = new Detale();
-            d3.LangeliuKoord.Add(new Point(2, 4));
-            d3.LangeliuKoord.Add(new Point(1, 4));
-            d3.LangeliuKoord.Add(new Point(1, 5));
-            d3.LangeliuKoord.Add(new Point(1, 6));
-            d3.DetalesNr = 3;
-            d3.PasukimoKampas = 0;
-            d3.Spalva = Colors.Orange;
+            Piece d3 = new Piece();
+            d3.coordsOfSquare.Add(new Point(2, 4));
+            d3.coordsOfSquare.Add(new Point(1, 4));
+            d3.coordsOfSquare.Add(new Point(1, 5));
+            d3.coordsOfSquare.Add(new Point(1, 6));
+            d3.pieceNo = 3;
+            d3.rotationAngle = 0;
+            d3.color = Colors.Orange;
 
-            Detale d4 = new Detale();
-            d4.LangeliuKoord.Add(new Point(2, 6));
-            d4.LangeliuKoord.Add(new Point(2, 5));
-            d4.LangeliuKoord.Add(new Point(1, 5));
-            d4.LangeliuKoord.Add(new Point(1, 6));
-            d4.DetalesNr = 4;
-            d4.PasukimoKampas = 0;
-            d4.Spalva = Colors.Yellow;
+            Piece d4 = new Piece();
+            d4.coordsOfSquare.Add(new Point(2, 6));
+            d4.coordsOfSquare.Add(new Point(2, 5));
+            d4.coordsOfSquare.Add(new Point(1, 5));
+            d4.coordsOfSquare.Add(new Point(1, 6));
+            d4.pieceNo = 4;
+            d4.rotationAngle = 0;
+            d4.color = Colors.Yellow;
 
-            Detale d5 = new Detale();
-            d5.LangeliuKoord.Add(new Point(2, 6));
-            d5.LangeliuKoord.Add(new Point(2, 5));
-            d5.LangeliuKoord.Add(new Point(1, 5));
-            d5.LangeliuKoord.Add(new Point(1, 4));
-            d5.DetalesNr = 5;
-            d5.PasukimoKampas = 0;
-            d5.Spalva = Colors.Red;
+            Piece d5 = new Piece();
+            d5.coordsOfSquare.Add(new Point(2, 6));
+            d5.coordsOfSquare.Add(new Point(2, 5));
+            d5.coordsOfSquare.Add(new Point(1, 5));
+            d5.coordsOfSquare.Add(new Point(1, 4));
+            d5.pieceNo = 5;
+            d5.rotationAngle = 0;
+            d5.color = Colors.Red;
 
-            Detale d6 = new Detale();
-            d6.LangeliuKoord.Add(new Point(2, 5));
-            d6.LangeliuKoord.Add(new Point(1, 5));
-            d6.LangeliuKoord.Add(new Point(1, 4));
-            d6.LangeliuKoord.Add(new Point(1, 6));
-            d6.DetalesNr = 6;
-            d6.PasukimoKampas = 0;
-            d6.Spalva = Colors.Purple;
+            Piece d6 = new Piece();
+            d6.coordsOfSquare.Add(new Point(2, 5));
+            d6.coordsOfSquare.Add(new Point(1, 5));
+            d6.coordsOfSquare.Add(new Point(1, 4));
+            d6.coordsOfSquare.Add(new Point(1, 6));
+            d6.pieceNo = 6;
+            d6.rotationAngle = 0;
+            d6.color = Colors.Purple;
 
-            Detale d7 = new Detale();
-            d7.LangeliuKoord.Add(new Point(2, 4));
-            d7.LangeliuKoord.Add(new Point(2, 5));
-            d7.LangeliuKoord.Add(new Point(1, 5));
-            d7.LangeliuKoord.Add(new Point(1, 6));
-            d7.DetalesNr = 7;
-            d7.PasukimoKampas = 0;
-            d7.Spalva = Colors.LimeGreen;
+            Piece d7 = new Piece();
+            d7.coordsOfSquare.Add(new Point(2, 4));
+            d7.coordsOfSquare.Add(new Point(2, 5));
+            d7.coordsOfSquare.Add(new Point(1, 5));
+            d7.coordsOfSquare.Add(new Point(1, 6));
+            d7.pieceNo = 7;
+            d7.rotationAngle = 0;
+            d7.color = Colors.LimeGreen;
 
-            VisosDetales.Add(d1);
-            VisosDetales.Add(d2);
-            VisosDetales.Add(d3);
-            VisosDetales.Add(d4);
-            VisosDetales.Add(d5);
-            VisosDetales.Add(d6);
-            VisosDetales.Add(d7);
+            allPieces.Add(d1);
+            allPieces.Add(d2);
+            allPieces.Add(d3);
+            allPieces.Add(d4);
+            allPieces.Add(d5);
+            allPieces.Add(d6);
+            allPieces.Add(d7);
         }
 
-        public Detale RandomDetale()
+        public Piece randomPiece()
         {
-            int indeksas = rnd.Next(VisosDetales.Count);
-            return VisosDetales[indeksas]; ;
+            int index = rnd.Next(allPieces.Count);
+            return allPieces[index]; ;
         }
 
         public MainWindow(Menu menu)
         {
-            Menu = menu;
+            menu = menu;
             InitializeComponent();
         }
 
@@ -124,11 +124,11 @@ namespace Tetris
             KeyDown += MainWindow_KeyDown;
             myBoard.myCnv = myCanvas;
             smallBoard.myCnv = myCanvas1;
-            myBoard.PiestiLenta();
-            smallBoard.PiestiLenta();
-            GeneruotiDetales();
-            BusimaDetale = RandomDetale();
-            StartAnimation();
+            myBoard.drawBoard();
+            smallBoard.drawBoard();
+            generatePieces();
+            futurePiece = randomPiece();
+            startAnimation();
         }
 
         void MainWindow_KeyDown(object sender, KeyEventArgs e)
@@ -140,16 +140,16 @@ namespace Tetris
                     case Key.Down:
                         break;
                     case Key.Up:
-                        KeyUpHandling();
+                        keyUpHandling();
                         break;
                     case Key.Left:
-                        KeyLeftHandling();
+                        keyLeftHandling();
                         break;
                     case Key.Right:
-                        KeyRightHandling();
+                        keyRightHandling();
                         break;
                     case Key.Space:
-                        HeySpaceHandling();
+                        keySpaceHandling();
                         break;
                     default:
                         break;
@@ -157,150 +157,150 @@ namespace Tetris
             }
         }
 
-        private void HeySpaceHandling()
+        private void keySpaceHandling()
         {
-            for (int i = 0; i < d.LangeliuKoord.Count; i++)
+            for (int i = 0; i < d.coordsOfSquare.Count; i++)
             {
-                Point Koord = d.LangeliuKoord[i];
-                myBoard.NuspalvintLangeli(Convert.ToInt32(Koord.X), Convert.ToInt32(Koord.Y), Colors.Black);
+                Point coord = d.coordsOfSquare[i];
+                myBoard.fillInSquare(Convert.ToInt32(coord.X), Convert.ToInt32(coord.Y), Colors.Black);
             }
-            while (!d.ArLieciaApatineSiena(myBoard.UzimtiLangeliai) && !d.ArLieciaDetalesApacia(myBoard.UzimtiLangeliai))
+            while (!d.isTouchingBottomWall(myBoard.occupiedSquares) && !d.isTouchingBottomOfPiece(myBoard.occupiedSquares))
             {
-                for (int i = 0; i < d.LangeliuKoord.Count; i++)
+                for (int i = 0; i < d.coordsOfSquare.Count; i++)
                 {
-                    Point koord = d.LangeliuKoord[i];
-                    koord.X += 1;
-                    d.LangeliuKoord[i] = koord;
+                    Point coord = d.coordsOfSquare[i];
+                    coord.X += 1;
+                    d.coordsOfSquare[i] = coord;
                 }
             }
-            for (int i = 0; i < d.LangeliuKoord.Count; i++)
+            for (int i = 0; i < d.coordsOfSquare.Count; i++)
             {
-                int indeksas = Convert.ToInt32(d.LangeliuKoord[i].X * 10 - (10 - d.LangeliuKoord[i].Y) - 1);
-                Point Koord = d.LangeliuKoord[i];
-                myBoard.UzimtiLangeliai.Add(myBoard.LargeBoardLangeliai[indeksas]);
-                myBoard.NuspalvintLangeli(Convert.ToInt32(Koord.X), Convert.ToInt32(Koord.Y), d.Spalva);
+                int index = Convert.ToInt32(d.coordsOfSquare[i].X * 10 - (10 - d.coordsOfSquare[i].Y) - 1);
+                Point coord = d.coordsOfSquare[i];
+                myBoard.occupiedSquares.Add(myBoard.largeBoardSquares[index]);
+                myBoard.fillInSquare(Convert.ToInt32(coord.X), Convert.ToInt32(coord.Y), d.color);
             }
             t.IsEnabled = false;
-            ArUzpildytaEile();
-            StartAnimation();
+            isRowFilled();
+            startAnimation();
         }
 
-        private void KeyRightHandling()
+        private void keyRightHandling()
         {
-            if (!d.ArLieciaDesineSiena(myBoard.UzimtiLangeliai) && !d.ArLieciaDetalesDesine(myBoard.UzimtiLangeliai))
+            if (!d.isTouchingRightWall(myBoard.occupiedSquares) && !d.isTouchingRightOfPiece(myBoard.occupiedSquares))
             {
-                for (int i = 0; i < d.LangeliuKoord.Count; i++)
+                for (int i = 0; i < d.coordsOfSquare.Count; i++)
                 {
-                    Point koord = d.LangeliuKoord[i];
-                    myBoard.NuspalvintLangeli(Convert.ToInt32(koord.X), Convert.ToInt32(koord.Y), Colors.Black);
-                    koord.Y += 1;
-                    d.LangeliuKoord[i] = koord;
+                    Point coord = d.coordsOfSquare[i];
+                    myBoard.fillInSquare(Convert.ToInt32(coord.X), Convert.ToInt32(coord.Y), Colors.Black);
+                    coord.Y += 1;
+                    d.coordsOfSquare[i] = coord;
                 }
-                for (int i = 0; i < d.LangeliuKoord.Count; i++)
+                for (int i = 0; i < d.coordsOfSquare.Count; i++)
                 {
-                    Point koord = d.LangeliuKoord[i];
-                    myBoard.NuspalvintLangeli(Convert.ToInt32(koord.X), Convert.ToInt32(koord.Y), d.Spalva);
-                    d.LangeliuKoord[i] = koord;
+                    Point coord = d.coordsOfSquare[i];
+                    myBoard.fillInSquare(Convert.ToInt32(coord.X), Convert.ToInt32(coord.Y), d.color);
+                    d.coordsOfSquare[i] = coord;
                 }
             }
-            if (d.ArLieciaDetalesApacia(myBoard.UzimtiLangeliai))
+            if (d.isTouchingBottomOfPiece(myBoard.occupiedSquares))
             {
                 t.IsEnabled = false;
-                for (int i = 0; i < d.LangeliuKoord.Count; i++)
+                for (int i = 0; i < d.coordsOfSquare.Count; i++)
                 {
-                    int indeksas = Convert.ToInt32(d.LangeliuKoord[i].X * 10 - (10 - d.LangeliuKoord[i].Y) - 1);
-                    myBoard.UzimtiLangeliai.Add(myBoard.LargeBoardLangeliai[indeksas]);
+                    int index = Convert.ToInt32(d.coordsOfSquare[i].X * 10 - (10 - d.coordsOfSquare[i].Y) - 1);
+                    myBoard.occupiedSquares.Add(myBoard.largeBoardSquares[index]);
                 }
-                ArUzpildytaEile();
-                StartAnimation();
+                isRowFilled();
+                startAnimation();
             }
         }
 
-        private void KeyLeftHandling()
+        private void keyLeftHandling()
         {
-            if (!d.ArLieciaKaireSiena(myBoard.UzimtiLangeliai) && !d.ArLieciaDetalesKaire(myBoard.UzimtiLangeliai))
+            if (!d.isTouchingLeftWall(myBoard.occupiedSquares) && !d.isTouchingLeftOfPiece(myBoard.occupiedSquares))
             {
-                for (int i = 0; i < d.LangeliuKoord.Count; i++)
+                for (int i = 0; i < d.coordsOfSquare.Count; i++)
                 {
-                    Point koord = d.LangeliuKoord[i];
-                    myBoard.NuspalvintLangeli(Convert.ToInt32(koord.X), Convert.ToInt32(koord.Y), Colors.Black);
-                    koord.Y -= 1;
-                    d.LangeliuKoord[i] = koord;
+                    Point coord = d.coordsOfSquare[i];
+                    myBoard.fillInSquare(Convert.ToInt32(coord.X), Convert.ToInt32(coord.Y), Colors.Black);
+                    coord.Y -= 1;
+                    d.coordsOfSquare[i] = coord;
                 }
-                for (int i = 0; i < d.LangeliuKoord.Count; i++)
+                for (int i = 0; i < d.coordsOfSquare.Count; i++)
                 {
-                    Point koord = d.LangeliuKoord[i];
-                    myBoard.NuspalvintLangeli(Convert.ToInt32(koord.X), Convert.ToInt32(koord.Y), d.Spalva);
-                    d.LangeliuKoord[i] = koord;
+                    Point coord = d.coordsOfSquare[i];
+                    myBoard.fillInSquare(Convert.ToInt32(coord.X), Convert.ToInt32(coord.Y), d.color);
+                    d.coordsOfSquare[i] = coord;
                 }
             }
-            if (d.ArLieciaDetalesApacia(myBoard.UzimtiLangeliai))
+            if (d.isTouchingBottomOfPiece(myBoard.occupiedSquares))
             {
                 t.IsEnabled = false;
-                for (int i = 0; i < d.LangeliuKoord.Count; i++)
+                for (int i = 0; i < d.coordsOfSquare.Count; i++)
                 {
-                    int indeksas = Convert.ToInt32(d.LangeliuKoord[i].X * 10 - (10 - d.LangeliuKoord[i].Y) - 1);
-                    myBoard.UzimtiLangeliai.Add(myBoard.LargeBoardLangeliai[indeksas]);
+                    int index = Convert.ToInt32(d.coordsOfSquare[i].X * 10 - (10 - d.coordsOfSquare[i].Y) - 1);
+                    myBoard.occupiedSquares.Add(myBoard.largeBoardSquares[index]);
                 }
                 for (int i = 1; i <= 20; i++)
                 {
-                    if (myBoard.ArUzpildytaEile(i))
+                    if (myBoard.isRowFilled(i))
                     {
-                        myBoard.PanaikintiEile(i);
-                        Taskai += 100;
-                        blockTaskai.Text = Taskai.ToString();
+                        myBoard.removeRow(i);
+                        points += 100;
+                        blockpoints.Text = points.ToString();
                     }
                 }
-                StartAnimation();
+                startAnimation();
             }
         }
 
-        private void KeyUpHandling()
+        private void keyUpHandling()
         {
-            for (int c = 0; c < d.LangeliuKoord.Count; c++)
+            for (int c = 0; c < d.coordsOfSquare.Count; c++)
             {
-                Point tmp = d.LangeliuKoord[c];
-                myBoard.NuspalvintLangeli(Convert.ToInt32(tmp.X), Convert.ToInt32(tmp.Y), Colors.Black);
-                d.LangeliuKoord[c] = tmp;
+                Point tmp = d.coordsOfSquare[c];
+                myBoard.fillInSquare(Convert.ToInt32(tmp.X), Convert.ToInt32(tmp.Y), Colors.Black);
+                d.coordsOfSquare[c] = tmp;
             }
-            d.DetalesPasukimas(myBoard);
-            for (int c = 0; c < d.LangeliuKoord.Count; c++)
+            d.rotatePiece(myBoard);
+            for (int c = 0; c < d.coordsOfSquare.Count; c++)
             {
-                Point tmp = d.LangeliuKoord[c];
-                myBoard.NuspalvintLangeli(Convert.ToInt32(tmp.X), Convert.ToInt32(tmp.Y), d.Spalva);
+                Point tmp = d.coordsOfSquare[c];
+                myBoard.fillInSquare(Convert.ToInt32(tmp.X), Convert.ToInt32(tmp.Y), d.color);
             }
         }
 
-        private void ArUzpildytaEile()
+        private void isRowFilled()
         {
             for (int i = 1; i <= 20; i++)
             {
-                if (myBoard.ArUzpildytaEile(i))
+                if (myBoard.isRowFilled(i))
                 {
-                    myBoard.PanaikintiEile(i);
-                    Taskai += 100;
-                    blockTaskai.Text = Taskai.ToString();
+                    myBoard.removeRow(i);
+                    points += 100;
+                    blockpoints.Text = points.ToString();
                 }
             }
         }
 
-        private void StartAnimation()
+        private void startAnimation()
         {
-            smallBoard.Isvalymas();
-            GeneruotiDetales();
-            d = BusimaDetale;
-            BusimaDetale = RandomDetale();
+            smallBoard.clearSmallBoard();
+            generatePieces();
+            d = futurePiece;
+            futurePiece = randomPiece();
 
-            NupiestiDabartineDetale();
-            NupiestiSekanciaDetale();
+            drawCurrentPiece();
+            drawNextPiece();
 
-            if (!d.ArLieciaDetalesApacia(myBoard.UzimtiLangeliai)) // tikrinam, ar tik atsiradus detalei ji nera ant kitos detales
-                StartTimer();
+            if (!d.isTouchingBottomOfPiece(myBoard.occupiedSquares)) // tikrinam, ar tik atsiradus Piecei ji nera ant kitos Pieces
+                startTimer();
             else
-                EndGame();
+                endGame();
         }
 
-        private void StartTimer()
+        private void startTimer()
         {
             t = new DispatcherTimer();
             t.Tick += t_Tick;
@@ -308,81 +308,81 @@ namespace Tetris
             t.Start();
         }
 
-        private void EndGame()
+        private void endGame()
         {
             t.Stop();
-            arGameOver = true;
-            GameOver GameOver = new GameOver(Menu, Taskai, this);
-            GameOver.Show();
+            isGameOver = true;
+            GameOver gameOver = new GameOver(Menu, points, this);
+            gameOver.Show();
         }
 
-        private void NupiestiDabartineDetale()
+        private void drawCurrentPiece()
         {
-            foreach (var koord in d.LangeliuKoord)
+            foreach (var coord in d.coordsOfSquare)
             {
-                myBoard.NuspalvintLangeli(Convert.ToInt32(koord.X), Convert.ToInt32(koord.Y), d.Spalva);
+                myBoard.fillInSquare(Convert.ToInt32(coord.X), Convert.ToInt32(coord.Y), d.color);
             }
         }
 
-        private void NupiestiSekanciaDetale()
+        private void drawNextPiece()
         {
-            foreach (var koord in BusimaDetale.LangeliuKoord)
+            foreach (var coord in futurePiece.coordsOfSquare)
             {
-                smallBoard.NuspalvintiLangeli(Convert.ToInt32(koord.X), Convert.ToInt32(koord.Y), BusimaDetale.Spalva);
+                smallBoard.NuspalvintiLangeli(Convert.ToInt32(coord.X), Convert.ToInt32(coord.Y), futurePiece.color);
             }
         }
 
         void t_Tick(object sender, EventArgs e)
         {
-            if (d.ArLieciaDetalesApacia(myBoard.UzimtiLangeliai) || d.ArLieciaApatineSiena(myBoard.UzimtiLangeliai))
+            if (d.isTouchingBottomOfPiece(myBoard.occupiedSquares) || d.isTouchingBottomWall(myBoard.occupiedSquares))
             {
                 t.IsEnabled = false;
-                PaverstiDetaleStatine();
-                ArUzpildytaEile();
-                StartAnimation();
+                makePieceStatic();
+                isRowFilled();
+                startAnimation();
             }
             else
-                PajudintiDetale();
+                movePiece();
         }
 
-        private void PaverstiDetaleStatine()
+        private void makePieceStatic()
         {
-            for (int i = 0; i < d.LangeliuKoord.Count; i++)
+            for (int i = 0; i < d.coordsOfSquare.Count; i++)
             {
-                int indeksas = Convert.ToInt32(d.LangeliuKoord[i].X * 10 - (10 - d.LangeliuKoord[i].Y) - 1);
-                myBoard.UzimtiLangeliai.Add(myBoard.LargeBoardLangeliai[indeksas]);
+                int index = Convert.ToInt32(d.coordsOfSquare[i].X * 10 - (10 - d.coordsOfSquare[i].Y) - 1);
+                myBoard.occupiedSquares.Add(myBoard.largeBoardSquares[index]);
             }
         }
 
-        private void PajudintiDetale()
+        private void movePiece()
         {
-            NuspalvintiSenusLangelius();
-            NuspalvintiNaujusLangelius();
+            fillInOldSquares();
+            fillInNewSquares();
         }
 
-        private void NuspalvintiNaujusLangelius()
+        private void fillInNewSquares()
         {
-            for (int c = 0; c < d.LangeliuKoord.Count; c++)
+            for (int c = 0; c < d.coordsOfSquare.Count; c++)
             {
-                Point tmp = d.LangeliuKoord[c];
-                myBoard.NuspalvintLangeli(Convert.ToInt32(tmp.X), Convert.ToInt32(tmp.Y), d.Spalva);
+                Point tmp = d.coordsOfSquare[c];
+                myBoard.fillInSquare(Convert.ToInt32(tmp.X), Convert.ToInt32(tmp.Y), d.color);
             }
         }
 
-        private void NuspalvintiSenusLangelius()
+        private void fillInOldSquares()
         {
-            for (int c = 0; c < d.LangeliuKoord.Count; c++)
+            for (int c = 0; c < d.coordsOfSquare.Count; c++)
             {
-                Point tmp = d.LangeliuKoord[c];
-                myBoard.NuspalvintLangeli(Convert.ToInt32(tmp.X), Convert.ToInt32(tmp.Y), Colors.Black);
+                Point tmp = d.coordsOfSquare[c];
+                myBoard.fillInSquare(Convert.ToInt32(tmp.X), Convert.ToInt32(tmp.Y), Colors.Black);
                 tmp.X += 1;
-                d.LangeliuKoord[c] = tmp;
+                d.coordsOfSquare[c] = tmp;
             }
         }
 
         private void Window_Closing_1(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            if (!arGameOver)
+            if (!isGameOver)
                 Application.Current.Shutdown();
         }
     }

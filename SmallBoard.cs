@@ -13,62 +13,62 @@ namespace Tetris
     class SmallBoard
     {
         public Canvas myCnv;
-        private List<Langelis> SmallBoardLangeliai = new List<Langelis>();
-        public void PiestiLenta()
+        private List<Square> smallBoardSquares = new List<Square>();
+        public void drawBoard()
         {
             int x = 360;
             int y = 30;
-            int Eile = 1;
-            int Stulpelis = 1;
+            int row = 1;
+            int column = 1;
             for (int i = 0; i < 15; i++) // nubraizom salutinius langelius
             {
-                Langelis lang = SukurtiNaujaLangeli();
-                Canvas.SetLeft(lang.myRect, x);
-                Canvas.SetTop(lang.myRect, y);
-                myCnv.Children.Add(lang.myRect);
-                lang.Koord = new Point(Eile, Stulpelis);
-                SmallBoardLangeliai.Add(lang);
+                Square square = createNewSquare();
+                Canvas.SetLeft(square.myRect, x);
+                Canvas.SetTop(square.myRect, y);
+                myCnv.Children.Add(square.myRect);
+                square.coord = new Point(row, column);
+                smallBoardSquares.Add(square);
                 x += 30;
-                Stulpelis += 1;
+                column += 1;
                 if (x == 510)
                 {
-                    Eile += 1;
-                    Stulpelis = 1;
+                    row += 1;
+                    column = 1;
                     y += 30;
                     x = 360;
                 }
             }
         }
 
-        private static Langelis SukurtiNaujaLangeli()
+        private static Square createNewSquare()
         {
-            Langelis lang = new Langelis();
-            lang.myRect = new Rectangle();
-            lang.myRect.StrokeThickness = 1;
-            lang.myRect.Width = 30;
-            lang.myRect.Height = 30;
-            lang.myRect.Fill = new SolidColorBrush(Colors.Gainsboro);
-            return lang;
+            Square square = new Square();
+            square.myRect = new Rectangle();
+            square.myRect.StrokeThickness = 1;
+            square.myRect.Width = 30;
+            square.myRect.Height = 30;
+            square.myRect.Fill = new SolidColorBrush(Colors.Gainsboro);
+            return square;
         }
 
-        public void NuspalvintiLangeli(int eile, int stulpelis, Color color)
+        public void fillInSquare(int row, int column, Color color)
         {
-            int indeksas = (eile * 5) - (5 - stulpelis) + 2;
-            Langelis lang = SmallBoardLangeliai[indeksas];
-            lang.myRect.Stroke = new SolidColorBrush(Colors.SaddleBrown);
-            lang.myRect.StrokeThickness = 1;
-            SmallBoardLangeliai[indeksas].myRect.Fill = new SolidColorBrush(color);
-            SmallBoardLangeliai[indeksas] = lang;
+            int index = (row * 5) - (5 - column) + 2;
+            Square square = smallBoardSquares[index];
+            square.myRect.Stroke = new SolidColorBrush(Colors.SaddleBrown);
+            square.myRect.StrokeThickness = 1;
+            smallBoardSquares[index].myRect.Fill = new SolidColorBrush(color);
+            smallBoardSquares[index] = square;
         }
 
-        public void Isvalymas()
+        public void clearSmallBoard()
         {
-            for (int i = 0; i < SmallBoardLangeliai.Count; i++)
+            for (int i = 0; i < smallBoardSquares.Count; i++)
             {
-                Langelis lang = SmallBoardLangeliai[i];
-                lang.myRect.Fill = new SolidColorBrush(Colors.Gainsboro);
-                lang.myRect.Stroke = null;
-                SmallBoardLangeliai[i] = lang;
+                Square square = smallBoardSquares[i];
+                square.myRect.Fill = new SolidColorBrush(Colors.Gainsboro);
+                square.myRect.Stroke = null;
+                smallBoardSquares[i] = square;
             }
         }
     }

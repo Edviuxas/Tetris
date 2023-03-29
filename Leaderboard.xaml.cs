@@ -20,11 +20,11 @@ namespace Tetris
     /// </summary>
     public partial class Leaderboard : Window
     {
-        private DataTable Table;
+        private DataTable table;
 
         public Leaderboard(DataTable table)
         {
-            Table = table;
+            this.table = table;
             InitializeComponent();
         }
 

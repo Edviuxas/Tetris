@@ -16,106 +16,106 @@ namespace Tetris
         }
 
         public Canvas myCnv;
-        public List<Langelis> LargeBoardLangeliai = new List<Langelis>();
-        public List<Langelis> UzimtiLangeliai = new List<Langelis>();
+        public List<Square> largeBoardSquares = new List<Square>();
+        public List<Square> occupiedSquares = new List<Square>();
 
-        public bool ArUzpildytaEile(int eile)
+        public bool isRowFilled(int row)
         {
-            int Kiekis = 0;
-            int indeksas = eile * 10 - 1;
-            for (int a = indeksas - 9; a <= indeksas; a++)
+            int counter = 0;
+            int index = row * 10 - 1;
+            for (int a = index - 9; a <= index; a++)
             {
-                SolidColorBrush brush = LargeBoardLangeliai[a].myRect.Fill as SolidColorBrush;
+                SolidColorBrush brush = largeBoardSquares[a].myRect.Fill as SolidColorBrush;
                 if (brush.Color != Colors.Black)
-                    Kiekis += 1;
+                    counter += 1;
             }
-            if (Kiekis == 10)
+            if (counter == 10)
                 return true;
             return false;
         }
 
-        public void PanaikintiEile(int Eile)
+        public void removeRow(int row)
         {
             MediaPlayer player = new MediaPlayer();
             string a = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetEntryAssembly().Location);
             string b = System.IO.Path.Combine(a, "sms-alert-3-daniel_simon.mp3");
             player.Open(new Uri(b));
             player.Play();
-            for (int i = 0; i < UzimtiLangeliai.Count; i++)
+            for (int i = 0; i < occupiedSquares.Count; i++)
             {
-                if (Convert.ToInt32(UzimtiLangeliai[i].Koord.X) == Eile)
+                if (Convert.ToInt32(occupiedSquares[i].coord.X) == row)
                 {
-                    NuspalvintLangeli(Convert.ToInt32(UzimtiLangeliai[i].Koord.X), Convert.ToInt32(UzimtiLangeliai[i].Koord.Y), Colors.Black);
-                    UzimtiLangeliai.Remove(UzimtiLangeliai[i]);
+                    fillInSquare(Convert.ToInt32(occupiedSquares[i].coord.X), Convert.ToInt32(occupiedSquares[i].coord.Y), Colors.Black);
+                    occupiedSquares.Remove(occupiedSquares[i]);
                     i -= 1;
                 }
             }
-            UzimtiLangeliai = UzimtiLangeliai.OrderByDescending(p => p.Koord.X).ThenByDescending(p => p.Koord.Y).ToList(); // rikiavimas nuo apacios
-            for (int i = 0; i < UzimtiLangeliai.Count; i++)
+            occupiedSquares = occupiedSquares.OrderByDescending(p => p.coord.X).ThenByDescending(p => p.coord.Y).ToList(); // rikiavimas nuo apacios
+            for (int i = 0; i < occupiedSquares.Count; i++)
             {
-                Langelis lang = UzimtiLangeliai[i];
-                if (lang.Koord.X < Eile)
+                Square square = occupiedSquares[i];
+                if (square.coord.X < row)
                 {
-                    SolidColorBrush brush = lang.myRect.Fill as SolidColorBrush;
-                    NuspalvintLangeli(lang, Colors.Black);
-                    NuspalvintLangeli(Convert.ToInt32(lang.Koord.X + 1), Convert.ToInt32(lang.Koord.Y), brush.Color);
-                    int indeksas = Convert.ToInt32(lang.Koord.X * 10 - 10 + lang.Koord.Y - 1);
-                    UzimtiLangeliai[i] = LargeBoardLangeliai[indeksas + 10];   
+                    SolidColorBrush brush = square.myRect.Fill as SolidColorBrush;
+                    fillInSquare(square, Colors.Black);
+                    fillInSquare(Convert.ToInt32(square.coord.X + 1), Convert.ToInt32(square.coord.Y), brush.Color);
+                    int index = Convert.ToInt32(square.coord.X * 10 - 10 + square.coord.Y - 1);
+                    occupiedSquares[i] = largeBoardSquares[index + 10];   
                 }
             }
         }
 
-        public void PiestiLenta()
+        public void drawBoard()
         {
-            int Eile = 1;
-            int Stulpelis = 1;
+            int row = 1;
+            int column = 1;
             int x = 0;
             int y = 0;
             for (int i = 0; i < 200; i++)
             {
-                Langelis lang = SukurtiNaujaLangeli();
-                Canvas.SetLeft(lang.myRect, x);
-                Canvas.SetTop(lang.myRect, y);
-                myCnv.Children.Add(lang.myRect);
-                lang.Koord = new Point(Eile, Stulpelis);
-                LargeBoardLangeliai.Add(lang);
+                Square square = createNewSquare();
+                Canvas.SetLeft(square.myRect, x);
+                Canvas.SetTop(square.myRect, y);
+                myCnv.Children.Add(square.myRect);
+                square.coord = new Point(row, column);
+                largeBoardSquares.Add(square);
                 x += 30;
-                Stulpelis += 1;
+                column += 1;
                 if (x == 300)
                 {
-                    Eile += 1;
-                    Stulpelis = 1;
+                    row += 1;
+                    column = 1;
                     y += 30;
                     x = 0;
                 }
             }
         }
 
-        private static Langelis SukurtiNaujaLangeli()
+        private static Square createNewSquare()
         {
-            Langelis lang = new Langelis();
-            lang.myRect = new Rectangle();
-            lang.myRect.Stroke = new SolidColorBrush(Colors.SaddleBrown);
-            lang.myRect.StrokeThickness = 1;
-            lang.myRect.Width = 30;
-            lang.myRect.Height = 30;
-            lang.myRect.Fill = new SolidColorBrush(Colors.Black);
-            return lang;
+            Square square = new Square();
+            square.myRect = new Rectangle();
+            square.myRect.Stroke = new SolidColorBrush(Colors.SaddleBrown);
+            square.myRect.StrokeThickness = 1;
+            square.myRect.Width = 30;
+            square.myRect.Height = 30;
+            square.myRect.Fill = new SolidColorBrush(Colors.Black);
+            return square;
         }
 
-        #region NuspalvintiLangeli
+        #region fillInSquare
 
-        public void NuspalvintLangeli(int eile, int stulpelis, Color color)
+        public void fillInSquare(int row, int column, Color color)
         {
-            int indeksas = (eile * 10) - (10 - stulpelis) - 1;
-            Langelis lang = LargeBoardLangeliai[indeksas];
-            LargeBoardLangeliai[indeksas].myRect.Fill = new SolidColorBrush(color);
-            LargeBoardLangeliai[indeksas] = lang;
+            int index = (row * 10) - (10 - column) - 1;
+            Square square = largeBoardSquares[index];
+            largeBoardSquares[index].myRect.Fill = new SolidColorBrush(color);
+            largeBoardSquares[index] = square;
         }
 
-        public void NuspalvintLangeli(Langelis lang, Color color)
+        public void fillInSquare(Square square, Color color)
         {
-            lang.myRect.Fill = new SolidColorBrush(color);
+            square.myRect.Fill = new SolidColorBrush(color);
         }
 
         #endregion

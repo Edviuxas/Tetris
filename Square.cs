@@ -8,13 +8,13 @@ using System.Windows.Shapes;
 
 namespace Tetris
 {
-    public class Langelis
+    public class Square
     {
-        public Langelis()
+        public Square()
         {
 
         }
         public Rectangle myRect;
-        public Point Koord;
+        public Point coord;
     }
 }

@@ -24,7 +24,7 @@ namespace Tetris
     /// </summary>
     public partial class Menu : Window
     {
-        public DataTable TableLeaderboard = new DataTable();
+        public DataTable leaderboardTable = new DataTable();
 
         public Menu()
         {
@@ -34,54 +34,54 @@ namespace Tetris
         private void btnPradeti_Click(object sender, RoutedEventArgs e)
         {
             Hide();
-            MainWindow Main = new MainWindow(this);
-            Main.Show();
+            MainWindow main = new MainWindow(this);
+            main.Show();
         }
 
-        public DataTable PridetiIDataTable(string Data, int Taskai)
+        public DataTable addToDataTable(string data, int points)
         {
-            bool arDidintiLikusiusElementus = false; // Ar didinti visus likusius elementus
-            int KoksIndeksas = 0;
-            DataTable Naujas = TableLeaderboard;
-            for (int i = 1; i <= Naujas.Rows.Count; i++)
+            bool increaseRemainingElements = false; // Ar didinti visus likusius elementus
+            int index = 0;
+            DataTable newDataTable = leaderboardTable;
+            for (int i = 1; i <= newDataTable.Rows.Count; i++)
             {
-                DataRow dr = Naujas.Rows[i - 1];
-                if (arDidintiLikusiusElementus)
+                DataRow dr = newDataTable.Rows[i - 1];
+                if (increaseRemainingElements)
                     dr["Vieta"] = i + 1;
                 else
                 {
-                    if (Convert.ToInt32(dr["Taškai"]) <= Taskai)
+                    if (Convert.ToInt32(dr["Taškai"]) <= points)
                     {
-                        KoksIndeksas = i;
+                        index = i;
                         dr["Vieta"] = i + 1;
-                        arDidintiLikusiusElementus = true;
+                        increaseRemainingElements = true;
                     }
                 }
             }
-            if (KoksIndeksas == 0)
-                KoksIndeksas = Naujas.Rows.Count + 1;
-            DataRow newRow = Naujas.NewRow();
-            newRow[0] = KoksIndeksas;
-            newRow[1] = Data;
-            newRow[2] = Taskai;
-            Naujas.Rows.Add(newRow);
-            return Naujas;
+            if (index == 0)
+                index = newDataTable.Rows.Count + 1;
+            DataRow newRow = newDataTable.NewRow();
+            newRow[0] = index;
+            newRow[1] = data;
+            newRow[2] = points;
+            newDataTable.Rows.Add(newRow);
+            return newDataTable;
         }
 
-        private void SortLeaderBoard()
+        private void sortLeaderBoard()
         {
-            DataView dv = TableLeaderboard.DefaultView;
+            DataView dv = leaderboardTable.DefaultView;
             dv.Sort = "Vieta ASC";
-            TableLeaderboard = dv.ToTable();
-            int PaskutinisIndeksas = TableLeaderboard.Rows.Count;
-            if (PaskutinisIndeksas > 10)
+            leaderboardTable = dv.ToTable();
+            int lastIndex = leaderboardTable.Rows.Count;
+            if (lastIndex > 10)
             {
-                DataRow dr = TableLeaderboard.Rows[PaskutinisIndeksas - 1];
+                DataRow dr = leaderboardTable.Rows[lastIndex - 1];
                 dr.Delete();
             }
         }
 
-        private DataTable GautiDataTable(string path)
+        private DataTable getDataTable(string path)
         {
             using (var pck = new ExcelPackage())
             {
@@ -119,12 +119,12 @@ namespace Tetris
             }
         }
 
-        private void SurasytiIExcel(DataTable table)
+        private void writeToExcel(DataTable table)
         {
             string path = System.IO.Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
             path = System.IO.Path.Combine(path, "Leaderboard.xlsx");
-            FileInfo ExistingFile = new FileInfo(path);
-            using (var pck = new OfficeOpenXml.ExcelPackage(ExistingFile))
+            FileInfo existingFile = new FileInfo(path);
+            using (var pck = new OfficeOpenXml.ExcelPackage(existingFile))
             {
                 using (var stream = File.OpenRead(path))
                 {
@@ -146,19 +146,19 @@ namespace Tetris
         {
             string path = System.IO.Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
             path = System.IO.Path.Combine(path, "Leaderboard.xlsx");
-            TableLeaderboard = GautiDataTable(path);
+            leaderboardTable = getDataTable(path);
         }
 
         private void btnHighScore_Click(object sender, RoutedEventArgs e)
         {
-            Leaderboard Leaderboard = new Leaderboard(TableLeaderboard);
-            SortLeaderBoard();
-            Leaderboard.ShowDialog();
+            Leaderboard leaderboard = new Leaderboard(leaderboardTable);
+            sortLeaderBoard();
+            leaderboard.ShowDialog();
         }
 
         private void Window_Closing_1(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            SurasytiIExcel(TableLeaderboard);
+            writeToExcel(leaderboardTable);
         }
     }
 }
